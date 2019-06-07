@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "odinsplasmarifle.janus";
+option java_outer_classname = "JanusProto";
+
+package janus;
+
+service Janus {
+	rpc SayHello (HelloRequest) returns (HelloReply) {}
+
+	rpc SayHelloAgain (HelloRequest) returns (HelloReply) {}
+}
+
+message HelloRequest {
+ 	string name = 1;
+}
+
+message HelloReply {
+ 	string message = 1;
+}
